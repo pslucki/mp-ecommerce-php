@@ -1,8 +1,3 @@
-<?
-echo "<pre>";
-print_r($_POST);
-echo "</pre>";
-?>
 <!DOCTYPE html>
 <html class="supports-animation supports-columns svg no-touch no-ie no-oldie no-ios supports-backdrop-filter as-mouseuser" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
@@ -48,56 +43,7 @@ echo "</pre>";
 <!-- Optional: include a polyfill for ES6 Promises for IE11 -->
 <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
 
-<script>
-<?
-if (isset($_GET["collection_id"])){
-?>
-var collection_id = "<?=$_GET["collection_id"]?>";
-var collection_status = "<?=$_GET["collection_status"]?>";
-var external_reference = "<?=$_GET["external_reference"]?>";
-var payment_type = "<?=$_GET["payment_type"]?>";
 
-
-<?
-    switch($_GET["collection_status"]){
-        case "rejected":
-            ?>
-            Swal.fire({
-  title: 'Error!',
-  text: 'Ocurrio un error en el pago',
-  icon: 'error',
-  confirmButtonText: 'Ok'
-})
-            <?
-        break;
-        case "approved":
-            ?>
-            Swal.fire({
-  title: 'Tu producto va en camino!',
-  html: 'El pago se efecuto correctamente <br><br>collection_id: ' + collection_id + '<br><br> collection_status: '+  collection_status + '<br><br> external_reference: '+ external_reference + '<br><br> payment_type: '+ payment_type,
-  icon: 'success',
-  confirmButtonText: 'Ok'
-})
-            <?
-            break;
-            case "pending":
-                ?>
-                Swal.fire({
-      title: 'Atencion!',
-      text: 'El pago esta pendiente de procesamiento',
-      icon: 'info',
-      confirmButtonText: 'Ok'
-    })
-                <?
-            break;
-    }
-
-    
-
-}?>
-
-
-</script>
 <body class="as-theme-light-heroimage">
 
     <div class="stack">
@@ -616,4 +562,58 @@ var payment_type = "<?=$_GET["payment_type"]?>";
             </div>
         </div>
 
-</div><div class="mp-mercadopago-checkout-wrapper" style="z-index:-2147483647;display:block;background:rgba(0, 0, 0, 0.7);border:0;overflow:hidden;visibility:hidden;margin:0;padding:0;position:fixed;left:0;top:0;width:0;opacity:0;height:0;transition:opacity 220ms ease-in;"> <svg class="mp-spinner" viewBox="25 25 50 50"> <circle class="mp-spinner-path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"></circle> </svg> </div><div class="mp-mercadopago-checkout-wrapper" style="z-index:-2147483647;display:block;background:rgba(0, 0, 0, 0.7);border:0;overflow:hidden;visibility:hidden;margin:0;padding:0;position:fixed;left:0;top:0;width:0;opacity:0;height:0;transition:opacity 220ms ease-in;"> <svg class="mp-spinner" viewBox="25 25 50 50"> <circle class="mp-spinner-path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"></circle> </svg> </div><div class="mp-mercadopago-checkout-wrapper" style="z-index:-2147483647;display:block;background:rgba(0, 0, 0, 0.7);border:0;overflow:hidden;visibility:hidden;margin:0;padding:0;position:fixed;left:0;top:0;width:0;opacity:0;height:0;transition:opacity 220ms ease-in;"> <svg class="mp-spinner" viewBox="25 25 50 50"> <circle class="mp-spinner-path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"></circle> </svg> </div><div class="mp-mercadopago-checkout-wrapper" style="z-index:-2147483647;display:block;background:rgba(0, 0, 0, 0.7);border:0;overflow:hidden;visibility:hidden;margin:0;padding:0;position:fixed;left:0;top:0;width:0;opacity:0;height:0;transition:opacity 220ms ease-in;"> <svg class="mp-spinner" viewBox="25 25 50 50"> <circle class="mp-spinner-path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"></circle> </svg> </div><div class="mp-mercadopago-checkout-wrapper" style="z-index:-2147483647;display:block;background:rgba(0, 0, 0, 0.7);border:0;overflow:hidden;visibility:hidden;margin:0;padding:0;position:fixed;left:0;top:0;width:0;opacity:0;height:0;transition:opacity 220ms ease-in;"> <svg class="mp-spinner" viewBox="25 25 50 50"> <circle class="mp-spinner-path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"></circle> </svg> </div><div class="mp-mercadopago-checkout-wrapper" style="z-index:-2147483647;display:block;background:rgba(0, 0, 0, 0.7);border:0;overflow:hidden;visibility:hidden;margin:0;padding:0;position:fixed;left:0;top:0;width:0;opacity:0;height:0;transition:opacity 220ms ease-in;"> <svg class="mp-spinner" viewBox="25 25 50 50"> <circle class="mp-spinner-path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"></circle> </svg> </div><div id="ac-gn-viewport-emitter"> </div></body></html>
+</div><div class="mp-mercadopago-checkout-wrapper" style="z-index:-2147483647;display:block;background:rgba(0, 0, 0, 0.7);border:0;overflow:hidden;visibility:hidden;margin:0;padding:0;position:fixed;left:0;top:0;width:0;opacity:0;height:0;transition:opacity 220ms ease-in;"> <svg class="mp-spinner" viewBox="25 25 50 50"> <circle class="mp-spinner-path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"></circle> </svg> </div><div class="mp-mercadopago-checkout-wrapper" style="z-index:-2147483647;display:block;background:rgba(0, 0, 0, 0.7);border:0;overflow:hidden;visibility:hidden;margin:0;padding:0;position:fixed;left:0;top:0;width:0;opacity:0;height:0;transition:opacity 220ms ease-in;"> <svg class="mp-spinner" viewBox="25 25 50 50"> <circle class="mp-spinner-path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"></circle> </svg> </div><div class="mp-mercadopago-checkout-wrapper" style="z-index:-2147483647;display:block;background:rgba(0, 0, 0, 0.7);border:0;overflow:hidden;visibility:hidden;margin:0;padding:0;position:fixed;left:0;top:0;width:0;opacity:0;height:0;transition:opacity 220ms ease-in;"> <svg class="mp-spinner" viewBox="25 25 50 50"> <circle class="mp-spinner-path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"></circle> </svg> </div><div class="mp-mercadopago-checkout-wrapper" style="z-index:-2147483647;display:block;background:rgba(0, 0, 0, 0.7);border:0;overflow:hidden;visibility:hidden;margin:0;padding:0;position:fixed;left:0;top:0;width:0;opacity:0;height:0;transition:opacity 220ms ease-in;"> <svg class="mp-spinner" viewBox="25 25 50 50"> <circle class="mp-spinner-path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"></circle> </svg> </div><div class="mp-mercadopago-checkout-wrapper" style="z-index:-2147483647;display:block;background:rgba(0, 0, 0, 0.7);border:0;overflow:hidden;visibility:hidden;margin:0;padding:0;position:fixed;left:0;top:0;width:0;opacity:0;height:0;transition:opacity 220ms ease-in;"> <svg class="mp-spinner" viewBox="25 25 50 50"> <circle class="mp-spinner-path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"></circle> </svg> </div><div class="mp-mercadopago-checkout-wrapper" style="z-index:-2147483647;display:block;background:rgba(0, 0, 0, 0.7);border:0;overflow:hidden;visibility:hidden;margin:0;padding:0;position:fixed;left:0;top:0;width:0;opacity:0;height:0;transition:opacity 220ms ease-in;"> <svg class="mp-spinner" viewBox="25 25 50 50"> <circle class="mp-spinner-path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"></circle> </svg> </div><div id="ac-gn-viewport-emitter"> </div></body>
+<script>
+<?
+if (isset($_GET["collection_id"])){
+?>
+var collection_id = "<?=$_GET["collection_id"]?>";
+var collection_status = "<?=$_GET["collection_status"]?>";
+var external_reference = "<?=$_GET["external_reference"]?>";
+var payment_type = "<?=$_GET["payment_type"]?>";
+
+
+<?
+//print_r($_GET);
+        switch($_GET["collection_status"]){
+                case "rejected":
+                    ?>
+                    Swal.fire({
+                    title: 'Error!',
+                    text: 'Ocurrio un error en el pago',
+                    icon: 'error',
+                    confirmButtonText: 'Ok'
+                    })
+                    <?
+                break;
+                case "approved":
+                    ?>
+                    Swal.fire({
+                    title: 'Tu producto va en camino!',
+                    html: 'El pago se efecuto correctamente <br><br>collection_id: ' + collection_id + '<br><br> collection_status: '+  collection_status + '<br><br> external_reference: '+ external_reference + '<br><br> payment_type: '+ payment_type,
+                    icon: 'success',
+                    confirmButtonText: 'Ok'
+                    })
+                    <?
+                break;
+                case "pending":
+                    ?>
+                    Swal.fire({
+                    title: 'Atencion!',
+                    text: 'El pago esta pendiente de procesamiento',
+                    icon: 'info',
+                    confirmButtonText: 'Ok'
+                    })
+                    <?
+                break;
+        }
+
+    
+
+}?>
+
+
+</script>
+
+
+</html>

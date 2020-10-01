@@ -48,11 +48,9 @@ $payer->address =array(
 $preference->payer = $payer;
 $preference->external_reference = "pablo@inmenteweb.com";
 $preference->auto_return = "approved";
-$preference->notification_url="https://certificacion-mp.herokuapp.com/notification.php";
+$preference->notification_url="http://panel.elsitiorepuestos.com.ar/notificacion.php";
 $preference->save();
-echo "<pre>";
-print_r($preference);
-echo "</pre>";
+
 ?>
 <!DOCTYPE html>
 <html class="supports-animation supports-columns svg no-touch no-ie no-oldie no-ios supports-backdrop-filter as-mouseuser" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
