@@ -18,9 +18,9 @@ $item->picture_url = "https://certificacion-mp.herokuapp.com/".$_POST["img"];
 $item->picture_url = "https://certificacion-mp.herokuapp.com/assets/samsung-galaxy-s9-xxl.jpg";
 $preference->items = array($item);
 $preference->back_urls = array(
-    "success" => "http://mp-ecommerce-php.imw/",
-    "failure" => "http://mp-ecommerce-php.imw/",
-    "pending" => "http://mp-ecommerce-php.imw/"
+    "success" => "https://certificacion-mp.herokuapp.com/",
+    "failure" => "https://certificacion-mp.herokuapp.com/",
+    "pending" => "https://certificacion-mp.herokuapp.com/"
 );
 $preference->payment_methods = array(
     "excluded_payment_methods" => array(
