@@ -7,6 +7,7 @@ MercadoPago\SDK::setAccessToken('APP_USR-6317427424180639-042414-47e969706991d3a
 MercadoPago\SDK::setIntegratorId("dev_24c65fb163bf11ea96500242ac130004");
 $preference = new MercadoPago\Preference();
 
+//469485398-67218ff8-ce74-49bf-bcc2-b0f14ae7962c
 
 $item = new MercadoPago\Item();
 $item->title = $_POST['title'];
@@ -26,8 +27,9 @@ $preference->payment_methods = array(
     "excluded_payment_methods" => array(
       array("id" => "amex")
     ),
+   
     "excluded_payment_types" => array(
-      array("id" => "ticket")
+      array("id" => "atm")
     ),
     "installments" => 6
   );
