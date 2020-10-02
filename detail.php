@@ -48,6 +48,7 @@ $payer->address =array(
     "zip_code"=>"1111"
 );
 $preference->payer = $payer;
+$preference->description = "​Dispositivo móvil de Tienda e-commerce";
 $preference->external_reference = "pablo@inmenteweb.com";
 $preference->auto_return = "approved";
 $preference->notification_url="http://panel.elsitiorepuestos.com.ar/notificacion.php?source_news=webhooks";
