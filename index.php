@@ -571,6 +571,7 @@ var collection_id = "<?=$_GET["collection_id"]?>";
 var collection_status = "<?=$_GET["collection_status"]?>";
 var external_reference = "<?=$_GET["external_reference"]?>";
 var payment_type = "<?=$_GET["payment_type"]?>";
+var preference_id = "<?=$_GET["preference_id"]?>";
 
 
 <?
@@ -587,6 +588,7 @@ var payment_type = "<?=$_GET["payment_type"]?>";
                     <?
                 break;
                 case "approved":
+                    console.log(preference_id);
                     ?>
                     Swal.fire({
                     title: 'Tu producto va en camino!',
