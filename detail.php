@@ -14,7 +14,7 @@ $item->title = $_POST['title'];
 $item->quantity =1;
 $item->id = "1234";
 $item->unit_price = $_POST['price'];
-$item->description = "​Dispositivo movil de Tienda e-commerce";
+$item->description = "​Dispositivo móvil de Tienda e-commerce";
 $item->picture_url = "https://certificacion-mp.herokuapp.com/".$_POST["img"];
 //$item->picture_url = "https://certificacion-mp.herokuapp.com/assets/samsung-galaxy-s9-xxl.jpg";
 $preference->items = array($item);
@@ -50,7 +50,7 @@ $payer->address =array(
 $preference->payer = $payer;
 $preference->external_reference = "pablo@inmenteweb.com";
 $preference->auto_return = "approved";
-$preference->notification_url="http://panel.elsitiorepuestos.com.ar/notificacion.php";
+$preference->notification_url="http://panel.elsitiorepuestos.com.ar/notificacion.php?source_news=webhooks";
 $preference->save();
 
 ?>
