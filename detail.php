@@ -14,7 +14,7 @@ $item->title = $_POST['title'];
 $item->quantity =1;
 $item->id = "1234";
 $item->unit_price = $_POST['price'];
-$item->description = "​Dispositivo móvil de Tienda e-commerce";
+$item->description = "Dispositivo móvil de Tienda e-commerce";
 $item->picture_url = "https://certificacion-mp.herokuapp.com/".$_POST["img"];
 //$item->picture_url = "https://certificacion-mp.herokuapp.com/assets/samsung-galaxy-s9-xxl.jpg";
 $preference->items = array($item);
@@ -181,19 +181,14 @@ $preference->save();
                                             </h3>
                                         </div>
                                         <h3 >
-                                            <?php echo $_POST['price'] ?>
+                                            <?php echo $_POST['unit'] ?>
                                         </h3>
                                         <h3 >
-                                            <?php echo "$" . $_POST['unit'] ?>
+                                            <?php echo "$" . $_POST['price'] ?>
                                         </h3>
                                     </div>
-                                    <form action="/index.php" method="POST">
-  <script
-   src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
-   data-preference-id="<?php echo $preference->id; ?>">
-  </script>
-</form>
-                                    <a href="<?=$preference->init_point?>" type="submit" class="mercadopago-button" formmethod="post">Pagar</a>
+          
+                                    <a href="<?=$preference->init_point?>" type="submit" class="mercadopago-button" formmethod="post">Pagar la compra</a>
                                 </div>
                             </div>
                         </div>
